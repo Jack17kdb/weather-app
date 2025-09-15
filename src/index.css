@@ -3,36 +3,44 @@
 @tailwind components;
 @tailwind utilities;
 @plugin "daisyui" {
-    themes: light --default, dark --prefersdark, forest;
+    themes: light --default, dark --prefersdark, forest, retro;
   }
 
 @layer components {
+    .gradient-bg {
+        background-image: linear-gradient(45deg, #2f4680, #500ae4);
+    }
+
     .form-div {
-        @apply card bg-neutral rounded-box grid grow place-items-center gap-4 w-90 p-3 h-120
+        @apply bg-[linear-gradient(45deg,#2f4680,#500ae4)] rounded-box grid grow place-items-center gap-3 w-100 p-3 h-140
     }
 
     .search-div {
-        @apply flex gap-3 items-center
+        @apply flex gap-5 items-center justify-center mt-4
     }
 
     .search-bar {
-        @apply h-8 pl-3 rounded-xl outline-none bg-white text-black font-bold
+        @apply h-11 w-65 pl-5 rounded-4xl outline-none bg-white text-black text-xl
     }
 
     .search-icon {
-        @apply rounded-[50%] bg-white text-black p-1 h-7 w-7 cursor-pointer
+        @apply rounded-[50%] bg-white text-black p-1 h-9 w-9 cursor-pointer
+    }
+
+    .info {
+        @apply flex flex-col gap-2 items-center justify-center mb-4
     }
 
     .temp {
-        @apply text-3xl font-bold
+        @apply text-6xl font-bold
     }
 
     .location {
-        @apply text-xl font-bold
+        @apply text-3xl font-bold
     }
 
     .details {
-        @apply flex justify-between gap-45
+        @apply flex justify-between gap-35
     }
 
     .humid {
@@ -41,6 +49,10 @@
 
     .wind {
         @apply flex gap-2 items-center
+    }
+
+    .image {
+        @apply h-50 w-50
     }
 
     
