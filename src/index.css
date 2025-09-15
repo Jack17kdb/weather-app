@@ -1,2 +1,61 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@plugin "daisyui" {
+    themes: light --default, dark --prefersdark, forest;
+  }
+
+@layer components {
+    .form-div {
+        @apply card bg-neutral rounded-box grid grow place-items-center gap-4 w-90 p-3 h-120
+    }
+
+    .search-div {
+        @apply flex gap-3 items-center
+    }
+
+    .search-bar {
+        @apply h-8 pl-3 rounded-xl outline-none bg-white text-black font-bold
+    }
+
+    .search-icon {
+        @apply rounded-[50%] bg-white text-black p-1 h-7 w-7 cursor-pointer
+    }
+
+    .temp {
+        @apply text-3xl font-bold
+    }
+
+    .location {
+        @apply text-xl font-bold
+    }
+
+    .details {
+        @apply flex justify-between gap-45
+    }
+
+    .humid {
+        @apply flex gap-2 items-center
+    }
+
+    .wind {
+        @apply flex gap-2 items-center
+    }
+
+    
+}
+
+@layer base {
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #root {
+        height: 100%;
+        display: grid;
+        place-items: center;
+    }
+}
